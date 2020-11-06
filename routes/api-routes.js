@@ -25,4 +25,24 @@ module.exports = function(app) {
                 console.log(err);
             });
     });
+
+    app.post("/api/workouts", (req, res) => {
+        Workout.create(req.body)
+            .then(dbWorkout => {
+                res.json(dbWorkout);
+            })
+            .catch(err => {
+                res.status(400).json(err);
+            });
+    });
+
+    // app.get("/api/workouts/range", ({ body }, res) => {
+    //     Workout.find(body)
+    //         .then(dbWorkout => {
+    //             res.json(dbWorkout);
+    //         })
+    //         .catch(err => {
+    //             res.status(400).json(err);
+    //         });
+    // });
 };
