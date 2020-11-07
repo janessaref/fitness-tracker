@@ -5,9 +5,13 @@ const WorkoutSchema = new Schema({
         type: Array,
         default: [],
     },
-    createdAt: {
+    day: {
         type: Date,
         default: Date.now(),
+    },
+    totalDuration: {
+        type: Number,
+        default: 0
     }
 });
 
