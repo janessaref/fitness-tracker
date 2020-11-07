@@ -7,7 +7,8 @@ const Workout = require("../models/Workout");
 module.exports = function(app) {
 
     app.get("/api/workouts", (req, res) => {
-        Workout.find({}).sort({ _id: -1 }).limit(1)
+        Workout.find({})
+            .sort({ _id: -1 }).limit(1)
             .then(data => {
                 res.send(data);
             })
@@ -36,13 +37,13 @@ module.exports = function(app) {
             });
     });
 
-    // app.get("/api/workouts/range", (req, res) => {
-    //     Workout.find({})
-    //         .then(dbWorkout => {
-    //             res.json(dbWorkout);
-    //         })
-    //         .catch(err => {
-    //             res.status(400).json(err);
-    //         });
-    // });
+    app.get("/api/workouts/range", (req, res) => {
+        Workout.find({})
+            .then(dbWorkout => {
+                res.json(dbWorkout);
+            })
+            .catch(err => {
+                res.status(400).json(err);
+            });
+    });
 };
