@@ -1,11 +1,8 @@
-// we need to make createWorkout function
-// addExercise function
-// getLastWorkout
-
+// require our workout model
 const Workout = require("../models/Workout");
 
 module.exports = function(app) {
-
+    // grabs the most recent workout
     app.get("/api/workouts", (req, res) => {
         Workout.find({})
             .sort({ _id: -1 }).limit(1)
@@ -17,6 +14,7 @@ module.exports = function(app) {
             });
     });
 
+    // when user wants to add more exercises, this put request is being called
     app.put("/api/workouts/:id", (req, res) => {
         Workout.findByIdAndUpdate(req.params.id, { $push: { exercises: req.body } })
             .then(data => {
@@ -27,6 +25,7 @@ module.exports = function(app) {
             });
     });
 
+    // saves the workouts into the database
     app.post("/api/workouts", (req, res) => {
         Workout.create(req.body)
             .then(dbWorkout => {
@@ -37,6 +36,7 @@ module.exports = function(app) {
             });
     });
 
+    // displays the data on the dashboard
     app.get("/api/workouts/range", (req, res) => {
         Workout.find({})
             .then(dbWorkout => {
