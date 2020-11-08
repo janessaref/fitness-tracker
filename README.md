@@ -8,6 +8,7 @@ In this project, I've created a workout tracker where the user can create new wo
 * [Dependencies Used](#dependencies-used)
 * [GIF of Project](#gif-of-project)
 * [Code Snippet](#code-snippet)
+* [Deployed Link](#deployed-link)
 * [Author](#author)
 * [License](#license)
 * [Acknowledgments](#acknowledgments)
@@ -27,6 +28,8 @@ In this project, I've created a workout tracker where the user can create new wo
  * [mongodb](https://www.mongodb.com/)
 
 ## GIF of Project
+
+Here's a GIF of the application.
 
 ![gif](assets/fittrack.gif)
 
@@ -63,6 +66,9 @@ const Workout = mongoose.model("workout", WorkoutSchema);
 
 module.exports = Workout;
 ```
+
+## Deployed Link
+- [See Live Site](https://mighty-tor-92805.herokuapp.com/)
 
 ## Author
 
