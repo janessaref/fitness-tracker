@@ -26,6 +26,8 @@ In this project, I've created a workout tracker where the user can create new wo
  * [Express.js](https://expressjs.com/)
  * [morgan](https://www.npmjs.com/package/morgan)
  * [mongodb](https://www.mongodb.com/)
+ * [if-env](https://www.npmjs.com/package/if-env)
+ * [nodemon](https://www.npmjs.com/package/nodemon)
 
 ## GIF of Project
 
