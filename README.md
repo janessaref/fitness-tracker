@@ -70,7 +70,7 @@ module.exports = Workout;
 ```
 
 ## Deployed Link
-- [See Live Site](https://mighty-tor-92805.herokuapp.com/)
+- [See Live Site](https://dailyfitnesstracker.herokuapp.com/)
 
 ## Author
 
